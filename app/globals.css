@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+body {
+  background-color: #0F172A;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Subtle grid / glow background texture */
+.bg-grid {
+  background-image:
+    radial-gradient(circle at 50% 0%, rgba(245, 158, 11, 0.08), transparent 45%),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 64px 64px, 64px 64px;
+}
+
+::selection {
+  background: rgba(245, 158, 11, 0.3);
+  color: #fff;
+}
+
+/* Thin custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0F172A;
+}
+::-webkit-scrollbar-thumb {
+  background: #243150;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2f3f63;
+}
+
+@layer components {
+  .section-label {
+    @apply font-mono text-xs sm:text-sm tracking-[0.25em] uppercase text-amber-accent;
+  }
+
+  .cta-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-amber-accent px-6 py-3
+      font-medium text-navy-900 transition-all duration-200
+      hover:bg-amber-400 hover:shadow-[0_0_28px_2px_rgba(245,158,11,0.45)]
+      focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-accent focus-visible:ring-offset-2 focus-visible:ring-offset-navy-900;
+  }
+
+  .cta-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-white/20 px-6 py-3
+      font-medium text-white transition-all duration-200
+      hover:border-amber-accent/70 hover:text-amber-accent;
+  }
+
+  .card {
+    @apply rounded-xl border border-white/10 bg-white/[0.02] p-6 transition-colors duration-200
+      hover:border-amber-accent/40 hover:bg-white/[0.04];
+  }
+
+  .link-arrow {
+    @apply inline-flex items-center gap-2 font-medium text-amber-accent transition-all duration-200
+      hover:gap-3;
+  }
+}
