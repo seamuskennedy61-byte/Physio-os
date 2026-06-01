@@ -5,7 +5,7 @@ import { Section, Label, PageHero } from "@/components/ui";
 export const metadata: Metadata = {
   title: "Systems — Keystone AI",
   description:
-    "Three systems designed for coaching enterprises and built inside your business: Implement, Intelligence, Community.",
+    "Four systems designed for coaching enterprises and built inside your business: Implement, Intelligence, Community, and Accelerate.",
 };
 
 const systems = [
@@ -69,7 +69,37 @@ const systems = [
       },
     ],
   },
+  {
+    tag: "/ ACCELERATE",
+    headline: "Grow faster",
+    intro:
+      "The systems that drive growth inside your coaching enterprise and inside your clients' businesses.",
+    layers: [
+      {
+        name: "Speed to lead",
+        body: "AI qualification and booking within 60 seconds of any inbound lead. 24/7. Every channel.",
+      },
+      {
+        name: "Sales enablement",
+        body: "AI transcription, follow up drafting, objection analysis. Your coaches close more with less admin.",
+      },
+      {
+        name: "Implementation support",
+        body: "clients get to their first win faster. Faster wins mean longer retention and stronger referrals.",
+      },
+      {
+        name: "Client performance tracking",
+        body: "early warning system that identifies at risk clients before they disengage. Your coaches intervene at the right moment not after it's too late.",
+      },
+      {
+        name: "Coach consistency",
+        body: "quality monitoring across your entire coaching team. The standard you built gets delivered every time — not just when you're watching.",
+      },
+    ],
+  },
 ];
+
+const LAYER_WORDS: Record<number, string> = { 3: "Three", 5: "Five" };
 
 export default function Systems() {
   return (
@@ -78,7 +108,7 @@ export default function Systems() {
         label="Systems"
         title={
           <>
-            Three systems. One goal.
+            Four systems. One goal.
             <br />
             <span className="text-amber-accent">Make leaving irrational.</span>
           </>
@@ -106,7 +136,9 @@ export default function Systems() {
           </p>
 
           <div className="mt-10">
-            <p className="section-label mb-6">Three layers</p>
+            <p className="section-label mb-6">
+              {LAYER_WORDS[s.layers.length] ?? s.layers.length} layers
+            </p>
             <div className="grid gap-6 lg:grid-cols-3">
               {s.layers.map((l) => (
                 <div key={l.name} className="card flex flex-col">

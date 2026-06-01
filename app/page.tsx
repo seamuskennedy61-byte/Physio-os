@@ -126,6 +126,45 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SECTION — THE RISK NOBODY IS TALKING ABOUT */}
+      <Section className="border-b border-white/10 bg-white/[0.015]">
+        <Label>The risk nobody is talking about</Label>
+
+        <p className="mt-8 max-w-3xl text-2xl font-semibold leading-snug tracking-tight sm:text-3xl md:text-4xl">
+          Ten years to build a reputation.
+          <br />
+          <span className="text-amber-accent">
+            One bad AI interaction to damage it.
+          </span>
+        </p>
+
+        <div className="mt-10 max-w-3xl space-y-5 text-lg leading-relaxed text-white/70">
+          <p>
+            Most AI being built right now is built by people who learned prompt
+            engineering six months ago. Vibe coders connecting tools together and
+            calling it a strategy.
+          </p>
+          <p className="text-white">That's not what your reputation deserves.</p>
+          <p>
+            Keystone AI is built on serious AI engineering. Machine learning
+            engineers who have shipped production systems at scale. Technical
+            architects who know the difference between something that works in a
+            demo and something that works at 11pm on a Sunday with no human in
+            the loop.
+          </p>
+        </div>
+
+        <div className="mt-14 max-w-3xl space-y-5">
+          <p className="text-2xl font-semibold leading-snug tracking-tight sm:text-3xl">
+            We don't ship anything we wouldn't stake your reputation on.
+          </p>
+          <p className="text-xl leading-snug text-white/80 sm:text-2xl">
+            Quality is not a feature.{" "}
+            <span className="text-amber-accent">It's the foundation.</span>
+          </p>
+        </div>
+      </Section>
+
       {/* SECTION 2 — THE TWO PROBLEMS */}
       <Section>
         <Label>The two problems every coaching enterprise is facing</Label>
@@ -142,6 +181,46 @@ export default function Home() {
               </p>
             </div>
           ))}
+        </div>
+      </Section>
+
+      {/* SECTION — TWO PROBLEMS. ONE PLATFORM. */}
+      <Section>
+        <Label>Two problems. One platform.</Label>
+        <h2 className="mt-5 max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl">
+          Most coaching enterprises are fighting on two fronts simultaneously.
+        </h2>
+        <div className="mt-8 max-w-3xl space-y-5 text-lg leading-relaxed text-white/70">
+          <p>
+            Protecting what they've built — clients churning, IP being copied,
+            competitors getting closer than they should be able to.
+          </p>
+          <p>
+            And growing what they're building — leads not converting fast enough,
+            clients not implementing quickly enough, coaches not performing
+            consistently enough.
+          </p>
+          <p className="text-white">
+            These aren't separate problems with separate solutions.
+          </p>
+          <p>
+            The coaching enterprise that embeds itself into how its clients
+            operate doesn't just retain them longer. It helps them get better
+            results faster. Better results mean longer retention. Longer retention
+            means more data. More data means smarter systems. Smarter systems mean
+            better results.
+          </p>
+          <p className="text-white">That flywheel is what we build.</p>
+        </div>
+
+        <div className="mt-14 max-w-3xl space-y-3">
+          <p className="text-2xl font-semibold leading-snug tracking-tight sm:text-3xl">
+            Not just infrastructure that stops clients leaving.
+          </p>
+          <p className="text-2xl font-semibold leading-snug tracking-tight text-amber-accent sm:text-3xl">
+            Infrastructure that makes clients genuinely better — and impossible to
+            leave as a result.
+          </p>
         </div>
       </Section>
 
